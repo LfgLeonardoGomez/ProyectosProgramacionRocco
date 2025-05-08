@@ -1,0 +1,4 @@
+ 
+# Ignorar la data de MySQL
+mysql/data/
+mysql/*.sock
