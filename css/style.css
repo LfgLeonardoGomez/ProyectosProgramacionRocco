@@ -1,0 +1,476 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Winky Sans", sans-serif;
+}
+
+/* Fondo de las paginas */
+.body-index{
+    background-image: url(/Imagenes/fondo3.jpg);
+    background-position: center;
+    background-size:20cm;
+}
+.body-contacto{
+    background-image: url(/Imagenes/fondo3.jpg);
+    background-position: center;
+    background-size:20cm;
+}
+.body-menu{
+    background-image: url(/Imagenes/fondo3.jpg);
+    background-position: center;
+    background-size:20cm;
+}
+.body-resenia{
+    background-image: url(/Imagenes/fondo3.jpg);
+    background-position: center;
+    background-size:20cm;
+}
+
+/* Estilos del index.thml */
+.header-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
+}
+
+.header-index h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: wheat;
+    height: 150px;
+    width: 400px;
+    border-radius: 20px;
+}
+.header-index h1:hover{
+    transition: .4s;
+    background-image: url(/Imagenes/italia.png);
+    background-size:600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+.main-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.main-index section{
+    background-color: brown;
+    color: wheat;
+    margin-right: 50px;
+    font-size: 20px;
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+strong{
+    font-size: 80px;
+}
+
+.main-index img{
+    width: 550px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+@media (max-width: 968px) {
+    .main-index {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center;
+        min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+    }
+
+    .main-index section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el contenido */
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .main-index img {
+        max-width: 100%; /* Evita que sea demasiado grande */
+        border-radius: 20px;
+    }
+
+    .header-index {
+        text-align: center; /* Centra el texto del header */
+    }
+}
+@media (max-width: 530px) {
+    .main-index section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el contenido */
+        justify-content: center;
+        max-width: 350px;
+        border-radius: 20px;
+        margin-top: 15px;
+    }
+    .section-index {
+        font-size: 14px; /* Reduce el tamaño del texto */
+        padding: 15px;
+
+}
+}
+@media (max-width: 390px) {
+    .main-index {
+
+        padding: 10px;
+    }
+
+    .main-index section {
+        max-width: 250px;
+        border-radius: 15px;
+        margin-top: 10px;
+        
+    }
+
+    .main-index .section-index {
+        height: 300px;
+        font-size: 12px; /* Reduce el tamaño de fuente */
+        
+    }
+
+    .main-index section img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+/* Estilo del menú lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: brown;
+    color: wheat;
+    padding: 20px;
+    transform: translateX(-250px); /* Inicialmente fuera de la vista */
+    transition: transform 0.5s;
+}
+
+.menu-lateral.activo {
+    transform: translateX(0); /* Cuando se agrega la clase 'activo', el menú se mueve a la vista */
+}
+
+.contenido-menu {
+    margin-top: 50px;
+}
+
+.contenido-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenido-menu li {
+    margin-bottom: 10px;
+}
+
+.contenido-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Estilo para el botón que abre el menú */
+/* Estilo del botón normal */
+.boton-menu {
+    position: fixed;  
+    top: 20px;
+    left: 20px;
+    background-color: brown;
+    color: transparent;
+    background-image: url(/Imagenes/3barras.ico);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 2;  
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del botón cuando el menú está abierto */
+.boton-menu.activo {
+    background-color: white;  /* Nuevo color cuando el menú está abierto */
+    background-image: url(/Imagenes/cerrar.ico);
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos contacto */
+.header-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.header-contacto h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: wheat;
+    height: 60px;
+    width: 200px;
+    border-radius: 20px;
+}
+.section-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.section-contacto article{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 8px;
+    background-color: brown;
+    color: wheat;
+    width: 400px;
+    border-radius: 20px;
+    
+}
+article p{
+    font-size: 25px;
+    margin: 15px;
+}
+.section-contacto iframe{
+    width: 350px;
+    height: 195px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+/* Estilos el menu de pizzas */
+.header-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.header-menu h1{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: wheat;
+    height: 80px;
+    width: 250px;
+    border-radius: 20px;
+}
+.main-menu{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.section-menu{
+    margin: 20px;
+    border-radius: 10px;
+    color: wheat;
+    background-color: brown;
+    width: 300px;
+    height: 350px;
+    border: solid 5px wheat;
+}
+.section-menu img{
+    width: 100%;
+    height: 200px;
+    border-radius: 11px 11px 0px 0px;
+}
+.section-menu div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.section-menu div p {
+    width: 100%; /* Ajusta el ancho para evitar desbordes */
+    max-width: 100%; /* Evita que se salga del contenedor */
+    height: auto; /* Se adapta al contenido */
+    min-height: 1em; /* Altura mínima */
+    text-align: center; /* Centra el texto */
+    white-space: normal; /* Permite saltos de línea */
+    overflow-wrap: break-word; /* Evita palabras muy largas */
+    word-break: break-word; /* Rompe palabras si es necesario */
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    padding: 5px; /* Agrega espacio interno */
+    margin: 0 auto; /* Centra el párrafo */
+}
+.main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header-resenia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-resenia h1 {
+    font-size: 30px;
+    background-color: brown;
+    color: wheat;
+    height: 80px;
+    width: 250px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.main-form h2{
+    font-size: 24px;
+    background-color: brown;
+    color: wheat;
+    height: 80px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a62b2b;
+    color: wheat;
+    margin: 15px;
+    padding: 15px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 15px;
+}
+
+/* Alinea etiquetas e inputs mejor */
+.section-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.section-form label input {
+    border-radius: 8px;
+    border: solid 1.5px;
+    padding: 5px;
+    width: 100%;
+    max-width: 220px;
+}
+
+/* Radio buttons en línea */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Sección de estrellas más compacta */
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.rating label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Área de texto más compacta */
+.section-form textarea {
+    width: 90%;
+    max-width: 220px;
+    height: 60px;
+    border-radius: 8px;
+    border: solid 1.5px;
+}
+
+/* Botón de enviar más pequeño */
+.submit {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: solid 1.5px black;
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .header-resenia h1 {
+        font-size: 20px;
+        width: 90%;
+    }
+    
+    .section-form {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .radio-group {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .rating {
+        gap: 2px;
+    }
+
+    .section-form label input,
+    .section-form textarea {
+        width: 100%;
+    }
+}
+
