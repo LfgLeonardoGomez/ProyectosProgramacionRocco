@@ -7,22 +7,22 @@
 
 /* Fondo de las paginas */
 .body-index{
-    background-image: url(/Imagenes/fondo3.jpg);
+    background-image: url(../Imagenes/fondo3.jpg);
     background-position: center;
     background-size:20cm;
 }
 .body-contacto{
-    background-image: url(/Imagenes/fondo3.jpg);
+    background-image: url(../Imagenes/fondo3.jpg);
     background-position: center;
     background-size:20cm;
 }
 .body-menu{
-    background-image: url(/Imagenes/fondo3.jpg);
+    background-image: url(../Imagenes/fondo3.jpg);
     background-position: center;
     background-size:20cm;
 }
 .body-resenia{
-    background-image: url(/Imagenes/fondo3.jpg);
+    background-image: url(../Imagenes/fondo3.jpg);
     background-position: center;
     background-size:20cm;
 }
@@ -48,7 +48,7 @@
 }
 .header-index h1:hover{
     transition: .4s;
-    background-image: url(/Imagenes/italia.png);
+    background-image: url(../Imagenes/italia.png);
     background-size:600px;
     background-position: center;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@ strong{
     left: 20px;
     background-color: brown;
     color: transparent;
-    background-image: url(/Imagenes/3barras.ico);
+    background-image: url(../Imagenes/3barras.ico);
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -217,7 +217,7 @@ strong{
 /* Estilo del botón cuando el menú está abierto */
 .boton-menu.activo {
     background-color: white;  /* Nuevo color cuando el menú está abierto */
-    background-image: url(/Imagenes/cerrar.ico);
+    background-image: url(../Imagenes/cerrar.ico);
     color: transparent;
     background-position: center;
     background-repeat: no-repeat;
