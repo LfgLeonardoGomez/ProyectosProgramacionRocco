@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="/Imagenes/icon.ico">
-    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -14,80 +13,78 @@
 <body class="body-menu">
     <header class="header-menu"> 
         <h1>Pizzeria Mendoza</h1>
+        <button id="realizar-pedido-btn">Realizar Pedido</button>
     </header>
+
     <main class="main-menu">
-        <section class="section-menu">
-            <img src="../Imagenes/muzarrella2.jpg" alt="">
-            <div>
-                <h3>Muzza</h3>
-                <p>Muzarrella, Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/jamonMorron.jpg" alt="">
-            <div>
-                <h3>Jamon y Morron</h3>
-                <p>Tomate, Muzarella, Jamon, Morron y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/Waiana.jpg" alt="">
-            <div>
-                <h3>Hawaiana</h3>
-                <p>Tomate, Muzarrella, Jamon, Anana y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/Calabresa1.jpg" alt="">
-            <div>
-                <h3>Calabresa</h3>
-                <p>Tomate, Muzarella, Salame y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/choclo1.jpg" alt="">
-            <div>
-                <h3>Choclo</h3>
-                <p>Muzarella, Choclo y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/4quesos1.jpg" alt="">
-            <div>
-                <h3>4 Quesos</h3>
-                <p>Tomate, Muzarella, Roquefort, Parmesano, Provolone y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/Palmitos.jpg" alt="">
-            <div>
-                <h3>Palmitos</h3>
-                <p>Tomate, Muzarella, Palmitos y Oregano</p>
-            </div>
-        </section>
-        <section class="section-menu">
-            <img src="../Imagenes/jamonCrudo.jpg" alt="">
-            <div>
-                <h3>Jamon Crudo y Rucula</h3>
-                <p>Tomate, Muzarella, Jamon Crudo, Rucula y Oregano</p>
-            </div>
-        </section>
-        
-        <div class="menu-lateral">
-            <div class="contenido-menu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/menu.html" title="Menu">Nuestro Menú</a></li>
-                    <li><a href="../pages/contacto.html" title="Contacto">Contáctanos...</a></li>
-                    <li><a href="../pages/resenia.html" title="Reseñas">Déjanos tu opinión...</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Botón para abrir el menú -->
-        <button class="boton-menu">Menu</button>
-        
-        <script src="../js/script.js"></script>
+        <!-- Aquí se cargarán las pizzas de forma dinámica -->
     </main>
+
+    <!-- Menú lateral -->
+    <div class="menu-lateral">
+        <div class="contenido-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/menu.html" title="Menu">Nuestro Menú</a></li>
+                <li><a href="../pages/contacto.html" title="Contacto">Contáctanos...</a></li>
+                <li><a href="../pages/resenia.html" title="Reseñas">Déjanos tu opinión...</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botón para abrir el menú -->
+    <button class="boton-menu">Menu</button>
+
+    <!-- Modal Login-->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Ingresar</button>
+            </form>
+            <a href="#" id="registrarse-link">Sos nuevo? Registrate!</a>
+        </div>
+    </div>
+
+   <!-- Modal Registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registro de Usuario</h2>
+            <form id="registro-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required pattern="\d{7,8}" title="El DNI debe contener entre 7 y 8 dígitos.">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="password-registro">Contraseña:</label>
+                <input type="password" id="password-registro" name="password" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

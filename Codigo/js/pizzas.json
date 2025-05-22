@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Muzza",
+    "descripcion": "Muzarrella, Oregano",
+    "imagen": "../imagenes/muzarrella2.jpg"
+  },
+  {
+    "nombre": "Jamon y Morron",
+    "descripcion": "Tomate, Muzarella, Jamon, Morron y Oregano",
+    "imagen": "../imagenes/jamonMorron.jpg"
+  },
+  {
+    "nombre": "Hawaiana",
+    "descripcion": "Tomate, Muzarrella, Jamon, Anana y Oregano",
+    "imagen": "../imagenes/Waiana.jpg"
+  },
+  {
+    "nombre": "Calabresa",
+    "descripcion": "Tomate, Muzarella, Salame y Oregano",
+    "imagen": "../imagenes/Calabresa1.jpg"
+  },
+  {
+    "nombre": "Choclo",
+    "descripcion": "Muzarella, Choclo y Oregano",
+    "imagen": "../imagenes/choclo1.jpg"
+  },
+  {
+    "nombre": "4 Quesos",
+    "descripcion": "Tomate, Muzarella, Roquefort, Parmesano, Provolone y Oregano",
+    "imagen": "../imagenes/4quesos1.jpg"
+  },
+  {
+    "nombre": "Palmitos",
+    "descripcion": "Tomate, Muzarella, Palmitos y Oregano",
+    "imagen": "../imagenes/Palmitos.jpg"
+  },
+  {
+    "nombre": "Jamon Crudo y Rucula",
+    "descripcion": "Tomate, Muzarella, Jamon Crudo, Rucula y Oregano",
+    "imagen": "../imagenes/jamonCrudo.jpg"
+  }
+]
