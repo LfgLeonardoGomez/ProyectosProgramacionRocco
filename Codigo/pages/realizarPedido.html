@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Realizar Pedido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      text-align: center;
+      position: relative;
+    }
+
+    .bienvenida {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      margin-top: 4rem;
+    }
+
+    .cerrar-sesion {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .cerrar-sesion:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón fijo arriba a la derecha -->
+  <button class="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+
+  <div class="bienvenida" id="bienvenida-container">
+    <!-- Mensaje personalizado aquí -->
+  </div>
+
+  <script>
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+    if (usuario) {
+      document.getElementById('bienvenida-container').innerHTML = `
+        <h2>🍕 Bienvenido/a ${usuario.nombre} ${usuario.apellido}!</h2>
+        <p>Ya podés comenzar tu pedido.</p>
+      `;
+    } else {
+      window.location.href = "../index.html";
+    }
+
+    function cerrarSesion() {
+      localStorage.removeItem('usuario');
+      window.location.href = "../index.html";
+    }
+  </script>
+</body>
+</html>
